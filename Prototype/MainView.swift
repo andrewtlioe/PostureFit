@@ -16,6 +16,8 @@ struct MainView: View {
             
             SettingsView().tabItem { Label("Settings", systemImage: "gearshape.fill") }.tag(2)
         }.background(Color.gray)
+        //.background(Color(hue: 0.719, saturation: 0.002, brightness: 0.943).edgesIgnoringSafeArea(.all))
+        
     }
 }
 
