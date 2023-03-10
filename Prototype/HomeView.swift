@@ -41,7 +41,6 @@ struct HomeView: View {
                     .padding(20.0)
                     .frame(height: 200.0)
                     .foregroundColor(Color.white)
-                
             }//scrollview
             .background(Color(hue: 0.719, saturation: 0.002, brightness: 0.943).edgesIgnoringSafeArea(.all))
             
