@@ -15,6 +15,8 @@ class FrameHandler: NSObject, ObservableObject {
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private let context = CIContext()
+  
+    var delegate: AVCaptureVideoDataOutputSampleBufferDelegate?
 
     
     override init() {
@@ -22,7 +24,7 @@ class FrameHandler: NSObject, ObservableObject {
         checkPermission()
         sessionQueue.async { [unowned self] in
             self.setupCaptureSession()
-            self.captureSession.startRunning()
+            self.captureSession.startRunning() // need to implement captureSession.stopRunning()
         }
     }
     
@@ -63,7 +65,7 @@ class FrameHandler: NSObject, ObservableObject {
     }
 }
 
-var img_counter = 0
+var img_counter = 0 // for numbering of extracted frame image files
 extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
   
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -75,13 +77,13 @@ extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
     }
     
+  
+  //MARK: extracted frames from real time AVCaptureSession
     private func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> CGImage? {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return nil }
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
         guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
         
-      
-      
       
       let aNewUIImage = UIImage(cgImage: cgImage)
       
@@ -96,15 +98,17 @@ extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         */
       
-      //print("bbb", cgImage)
       if let data = aNewUIImage.jpegData(compressionQuality: 0.8) {
         let filename = getDocumentsDirectory().appendingPathComponent("extracted"+String(img_counter)+".jpg")
         try? data.write(to: filename)
-        print("Wrote", img_counter)
+        //print("Wrote", img_counter)
       }
       img_counter+=1
       
       
         return cgImage //can also use for extraction, then input to function for processing
     }
+  //---
+  
+  
 }
