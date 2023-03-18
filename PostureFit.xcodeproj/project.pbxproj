@@ -15,10 +15,11 @@
 		1BCD6B4E28F7C8000055BC80 /* PrototypeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6B4D28F7C8000055BC80 /* PrototypeUITestsLaunchTests.swift */; };
 		4E4BB7602997C6E9003EB516 /* PoseEstimation_Support in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BB75F2997C6E9003EB516 /* PoseEstimation_Support */; };
 		4E4BB767299CA031003EB516 /* TrainerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4BB766299CA031003EB516 /* TrainerMenuView.swift */; };
+		4EABBA2529C5A94A00ADB960 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA2329C5A86B00ADB960 /* OverlayView.swift */; };
+		4EABBA2629C5A97B00ADB960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EABBA2229C5A82500ADB960 /* Main.storyboard */; };
+		4EABBA2729C5A97D00ADB960 /* LaunchScreen_Prototype.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */; };
 		4EBA94DD29C42355002A45F3 /* PoseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */; };
-		4EBA94E129C42AF9002A45F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA94E029C42AF9002A45F3 /* Main.storyboard */; };
 		4EBA94E329C42D7A002A45F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E229C42D7A002A45F3 /* ViewController.swift */; };
-		4EBA94E529C4318B002A45F3 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E429C4318B002A45F3 /* OverlayView.swift */; };
 		4EBA94EA29C43226002A45F3 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E629C43225002A45F3 /* PoseNet.swift */; };
 		4EBA94EB29C43226002A45F3 /* MoveNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E729C43226002A45F3 /* MoveNet.swift */; };
 		4EBA94EC29C43226002A45F3 /* PoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E829C43226002A45F3 /* PoseData.swift */; };
@@ -70,12 +71,12 @@
 		4E4BB7622997CE34003EB516 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		4E4BB7642998B849003EB516 /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
 		4E4BB766299CA031003EB516 /* TrainerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerMenuView.swift; sourceTree = "<group>"; };
+		4EABBA2229C5A82500ADB960 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4EABBA2329C5A86B00ADB960 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWrapper.swift; sourceTree = "<group>"; };
 		4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseEstimator.swift; sourceTree = "<group>"; };
 		4EBA94DE29C4237A002A45F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4EBA94E029C42AF9002A45F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EBA94E229C42D7A002A45F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4EBA94E429C4318B002A45F3 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = ../../../examples_/lite/examples/pose_estimation/ios/PoseEstimation/UI/Views/OverlayView.swift; sourceTree = "<group>"; };
 		4EBA94E629C43225002A45F3 /* PoseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		4EBA94E729C43226002A45F3 /* MoveNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveNet.swift; sourceTree = "<group>"; };
 		4EBA94E829C43226002A45F3 /* PoseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseData.swift; sourceTree = "<group>"; };
@@ -158,20 +159,13 @@
 		1BCD6B2F28F7C7FC0055BC80 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
-				4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */,
-				4EBA94F729C436BA002A45F3 /* AppDelegate.swift */,
 				4EBA94DE29C4237A002A45F3 /* README.md */,
-				4EBA94DF29C42AA2002A45F3 /* TrainerViewAndFunc */,
+				4EBA94F729C436BA002A45F3 /* AppDelegate.swift */,
+				4EABBA2429C5A89D00ADB960 /* SwiftUI */,
+				4EBA94FF29C5A7D6002A45F3 /* SB_UI */,
 				4EBA94F029C43373002A45F3 /* Extensions */,
 				4EBA94DB29C42345002A45F3 /* Models */,
 				4E4BB7612997CDFF003EB516 /* Camera_Functionalities */,
-				1BCD6B3028F7C7FC0055BC80 /* PrototypeApp.swift */,
-				1BCD6B3228F7C7FC0055BC80 /* ContentView.swift */,
-				4ED986C8292BD2CE0031E482 /* MainView.swift */,
-				4ED986CE292BD7050031E482 /* HomeView.swift */,
-				4ED986CA292BD6CB0031E482 /* SettingsView.swift */,
-				4ED986CC292BD6DE0031E482 /* CameraFeedView.swift */,
-				4E4BB766299CA031003EB516 /* TrainerMenuView.swift */,
 				1BCD6B3428F7C8000055BC80 /* Assets.xcassets */,
 				1BCD6B3628F7C8000055BC80 /* Preview Content */,
 			);
@@ -206,11 +200,26 @@
 		4E4BB7612997CDFF003EB516 /* Camera_Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				4EBA94F929C43FA0002A45F3 /* CameraFeedManager.swift */,
 				4E4BB7642998B849003EB516 /* FrameHandler.swift */,
 				4E4BB7622997CE34003EB516 /* CameraManager.swift */,
 				4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */,
 			);
 			path = Camera_Functionalities;
+			sourceTree = "<group>";
+		};
+		4EABBA2429C5A89D00ADB960 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				1BCD6B3028F7C7FC0055BC80 /* PrototypeApp.swift */,
+				1BCD6B3228F7C7FC0055BC80 /* ContentView.swift */,
+				4ED986C8292BD2CE0031E482 /* MainView.swift */,
+				4ED986CE292BD7050031E482 /* HomeView.swift */,
+				4ED986CA292BD6CB0031E482 /* SettingsView.swift */,
+				4ED986CC292BD6DE0031E482 /* CameraFeedView.swift */,
+				4E4BB766299CA031003EB516 /* TrainerMenuView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		4EBA94DB29C42345002A45F3 /* Models */ = {
@@ -227,18 +236,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4EBA94DF29C42AA2002A45F3 /* TrainerViewAndFunc */ = {
-			isa = PBXGroup;
-			children = (
-				4EBA94F929C43FA0002A45F3 /* CameraFeedManager.swift */,
-				4EBA94E029C42AF9002A45F3 /* Main.storyboard */,
-				4EBA94E429C4318B002A45F3 /* OverlayView.swift */,
-				4EBA94E229C42D7A002A45F3 /* ViewController.swift */,
-				4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */,
-			);
-			path = TrainerViewAndFunc;
-			sourceTree = "<group>";
-		};
 		4EBA94F029C43373002A45F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +244,18 @@
 				4EBA94F329C433A1002A45F3 /* Data+TFLite.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EBA94FF29C5A7D6002A45F3 /* SB_UI */ = {
+			isa = PBXGroup;
+			children = (
+				4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */,
+				4EABBA2229C5A82500ADB960 /* Main.storyboard */,
+				4EABBA2329C5A86B00ADB960 /* OverlayView.swift */,
+				4EBA94E229C42D7A002A45F3 /* ViewController.swift */,
+				4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */,
+			);
+			path = SB_UI;
 			sourceTree = "<group>";
 		};
 		5FAD0C7D92EB1DBC5A11FAD4 /* Pods */ = {
@@ -364,9 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCD6B3828F7C8000055BC80 /* Preview Assets.xcassets in Resources */,
-				4EBA94E129C42AF9002A45F3 /* Main.storyboard in Resources */,
 				4E4BB7602997C6E9003EB516 /* PoseEstimation_Support in Resources */,
 				4EBA94FD29C4A314002A45F3 /* movenet_thunder.tflite in Resources */,
+				4EABBA2629C5A97B00ADB960 /* Main.storyboard in Resources */,
+				4EABBA2729C5A97D00ADB960 /* LaunchScreen_Prototype.storyboard in Resources */,
 				4EBA94FE29C4A316002A45F3 /* movenet_lightning.tflite in Resources */,
 				1BCD6B3528F7C8000055BC80 /* Assets.xcassets in Resources */,
 			);
@@ -422,6 +432,7 @@
 				4ED986CB292BD6CB0031E482 /* SettingsView.swift in Sources */,
 				4ED986CF292BD7050031E482 /* HomeView.swift in Sources */,
 				4EBA94EC29C43226002A45F3 /* PoseData.swift in Sources */,
+				4EABBA2529C5A94A00ADB960 /* OverlayView.swift in Sources */,
 				4ED986C9292BD2CE0031E482 /* MainView.swift in Sources */,
 				4EBA94E329C42D7A002A45F3 /* ViewController.swift in Sources */,
 				4EBA94F829C436BA002A45F3 /* AppDelegate.swift in Sources */,
@@ -434,7 +445,6 @@
 				4EBA94F529C433A1002A45F3 /* CVPixelBuffer+TFLite.swift in Sources */,
 				4EBA94EA29C43226002A45F3 /* PoseNet.swift in Sources */,
 				4EBA94FA29C43FA0002A45F3 /* CameraFeedManager.swift in Sources */,
-				4EBA94E529C4318B002A45F3 /* OverlayView.swift in Sources */,
 				1BCD6B3128F7C7FC0055BC80 /* PrototypeApp.swift in Sources */,
 				4EBA94F629C433A1002A45F3 /* Data+TFLite.swift in Sources */,
 			);

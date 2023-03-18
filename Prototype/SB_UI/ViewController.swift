@@ -60,8 +60,8 @@ final class ViewController: UIViewController { // change from UIViewController
   // MARK: View Handling Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    configSegmentedControl()
-    configStepper()
+    //configSegmentedControl() //uncomment for bottom settings
+    //configStepper() //uncomment for bottom settings
     updateModel()
     configCameraCapture()
   }
@@ -92,6 +92,7 @@ final class ViewController: UIViewController { // change from UIViewController
     threadStepper.setDecrementImage(threadStepper.decrementImage(for: .normal), for: .normal)
     threadStepper.setIncrementImage(threadStepper.incrementImage(for: .normal), for: .normal)
   }
+
 
   private func configSegmentedControl() {
     // Set title for device control
@@ -204,12 +205,16 @@ extension ViewController: CameraFeedManagerDelegate {
 
         // Return to main thread to show detection results on the app UI.
         DispatchQueue.main.async {
+          
+          /*
           self.totalTimeLabel.text = String(format: "%.2fms",
                                             times.total * 1000)
           self.scoreLabel.text = String(format: "%.3f", result.score)
           
-          //self.keypointLabel.text = String(format: "%.3f", result.score)
-
+          self.keypointLabel.text = String(format: "%.3f", result.score)
+          */
+          //remove from stack in SB
+          
           // Allowed to set image and overlay
           let image = UIImage(ciImage: CIImage(cvPixelBuffer: pixelBuffer))
 
