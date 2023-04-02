@@ -157,6 +157,10 @@ final class MoveNet: PoseEstimator {
       postprocessing: postprocessingTime)
     return (result, times)
   }
+  
+  
+  // possible location for repetition counter
+  
 
   // MARK: - Private functions to run the model
   /// Preprocesses given rectangle image to be `Data` of desired size by cropping and resizing it.

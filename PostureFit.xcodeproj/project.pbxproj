@@ -17,9 +17,16 @@
 		4E4BB767299CA031003EB516 /* TrainerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4BB766299CA031003EB516 /* TrainerMenuView.swift */; };
 		4EABBA2529C5A94A00ADB960 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA2329C5A86B00ADB960 /* OverlayView.swift */; };
 		4EABBA2629C5A97B00ADB960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EABBA2229C5A82500ADB960 /* Main.storyboard */; };
-		4EABBA2729C5A97D00ADB960 /* LaunchScreen_Prototype.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */; };
+		4EABBA2929C6C8D400ADB960 /* CorrectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA2829C6C8D400ADB960 /* CorrectorView.swift */; };
+		4EABBA3429C8B7F700ADB960 /* RepetitionEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */; };
+		4EABBA4129D00F5D00ADB960 /* CameraSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */; };
+		4EABBA4729D017E400ADB960 /* ViewController_Dup2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA4429D0176D00ADB960 /* ViewController_Dup2.swift */; };
+		4EABBA4929D0241C00ADB960 /* CameraFeedManager_Dup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA4829D0241C00ADB960 /* CameraFeedManager_Dup.swift */; };
+		4EABBA4B29D6B02900ADB960 /* RepModel_dup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA4A29D6B02900ADB960 /* RepModel_dup.swift */; };
+		4EABBA4F29D7232100ADB960 /* SquatPosition.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA4E29D7232100ADB960 /* SquatPosition.mlpackage */; settings = {ATTRIBUTES = (project_codegen, ); }; };
+		4EABBA5129D89F8500ADB960 /* SquatPosition_two.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA5029D89F8400ADB960 /* SquatPosition_two.mlmodel */; };
+		4EABBA5329D9C4EE00ADB960 /* SquatPosition_Three.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA5229D9C4EE00ADB960 /* SquatPosition_Three.mlmodel */; };
 		4EBA94DD29C42355002A45F3 /* PoseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */; };
-		4EBA94E329C42D7A002A45F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E229C42D7A002A45F3 /* ViewController.swift */; };
 		4EBA94EA29C43226002A45F3 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E629C43225002A45F3 /* PoseNet.swift */; };
 		4EBA94EB29C43226002A45F3 /* MoveNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E729C43226002A45F3 /* MoveNet.swift */; };
 		4EBA94EC29C43226002A45F3 /* PoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E829C43226002A45F3 /* PoseData.swift */; };
@@ -28,13 +35,11 @@
 		4EBA94F529C433A1002A45F3 /* CVPixelBuffer+TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94F229C433A1002A45F3 /* CVPixelBuffer+TFLite.swift */; };
 		4EBA94F629C433A1002A45F3 /* Data+TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94F329C433A1002A45F3 /* Data+TFLite.swift */; };
 		4EBA94F829C436BA002A45F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94F729C436BA002A45F3 /* AppDelegate.swift */; };
-		4EBA94FA29C43FA0002A45F3 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94F929C43FA0002A45F3 /* CameraFeedManager.swift */; };
 		4EBA94FC29C49FA4002A45F3 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */; };
 		4EBA94FD29C4A314002A45F3 /* movenet_thunder.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA94EE29C43259002A45F3 /* movenet_thunder.tflite */; };
 		4EBA94FE29C4A316002A45F3 /* movenet_lightning.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA94EF29C43259002A45F3 /* movenet_lightning.tflite */; };
 		4ED986C9292BD2CE0031E482 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986C8292BD2CE0031E482 /* MainView.swift */; };
 		4ED986CB292BD6CB0031E482 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986CA292BD6CB0031E482 /* SettingsView.swift */; };
-		4ED986CD292BD6DE0031E482 /* CameraFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986CC292BD6DE0031E482 /* CameraFeedView.swift */; };
 		4ED986CF292BD7050031E482 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986CE292BD7050031E482 /* HomeView.swift */; };
 		6F823CE26214AEA5C22E2514 /* Pods_PostureFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691CE6707C34463ED93FCAAE /* Pods_PostureFit.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +78,19 @@
 		4E4BB766299CA031003EB516 /* TrainerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerMenuView.swift; sourceTree = "<group>"; };
 		4EABBA2229C5A82500ADB960 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EABBA2329C5A86B00ADB960 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		4EABBA2829C6C8D400ADB960 /* CorrectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectorView.swift; sourceTree = "<group>"; };
+		4EABBA2C29C74AAA00ADB960 /* RepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepModel.swift; sourceTree = "<group>"; };
+		4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionEstimator.swift; sourceTree = "<group>"; };
+		4EABBA3629C9BD6600ADB960 /* ViewController_Dup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Dup.swift; sourceTree = "<group>"; };
+		4EABBA3B29CF605500ADB960 /* CameraFeedManager_back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager_back.swift; sourceTree = "<group>"; };
+		4EABBA3D29CF6FE800ADB960 /* CameraFeedManager_front.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager_front.swift; sourceTree = "<group>"; };
+		4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSwitcher.swift; sourceTree = "<group>"; };
+		4EABBA4429D0176D00ADB960 /* ViewController_Dup2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Dup2.swift; sourceTree = "<group>"; };
+		4EABBA4829D0241C00ADB960 /* CameraFeedManager_Dup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager_Dup.swift; sourceTree = "<group>"; };
+		4EABBA4A29D6B02900ADB960 /* RepModel_dup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepModel_dup.swift; sourceTree = "<group>"; };
+		4EABBA4E29D7232100ADB960 /* SquatPosition.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = SquatPosition.mlpackage; path = ML/Models/SquatPosition.mlpackage; sourceTree = SOURCE_ROOT; };
+		4EABBA5029D89F8400ADB960 /* SquatPosition_two.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SquatPosition_two.mlmodel; path = ML/Models/SquatPosition_two.mlmodel; sourceTree = SOURCE_ROOT; };
+		4EABBA5229D9C4EE00ADB960 /* SquatPosition_Three.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SquatPosition_Three.mlmodel; sourceTree = "<group>"; };
 		4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWrapper.swift; sourceTree = "<group>"; };
 		4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseEstimator.swift; sourceTree = "<group>"; };
 		4EBA94DE29C4237A002A45F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -163,6 +181,7 @@
 				4EBA94F729C436BA002A45F3 /* AppDelegate.swift */,
 				4EABBA2429C5A89D00ADB960 /* SwiftUI */,
 				4EBA94FF29C5A7D6002A45F3 /* SB_UI */,
+				4EABBA3829CF577A00ADB960 /* Functions */,
 				4EBA94F029C43373002A45F3 /* Extensions */,
 				4EBA94DB29C42345002A45F3 /* Models */,
 				4E4BB7612997CDFF003EB516 /* Camera_Functionalities */,
@@ -200,7 +219,10 @@
 		4E4BB7612997CDFF003EB516 /* Camera_Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				4EABBA4829D0241C00ADB960 /* CameraFeedManager_Dup.swift */,
 				4EBA94F929C43FA0002A45F3 /* CameraFeedManager.swift */,
+				4EABBA3B29CF605500ADB960 /* CameraFeedManager_back.swift */,
+				4EABBA3D29CF6FE800ADB960 /* CameraFeedManager_front.swift */,
 				4E4BB7642998B849003EB516 /* FrameHandler.swift */,
 				4E4BB7622997CE34003EB516 /* CameraManager.swift */,
 				4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */,
@@ -222,9 +244,19 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		4EABBA3829CF577A00ADB960 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		4EBA94DB29C42345002A45F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4EABBA4E29D7232100ADB960 /* SquatPosition.mlpackage */,
+				4EABBA5029D89F8400ADB960 /* SquatPosition_two.mlmodel */,
+				4EABBA5229D9C4EE00ADB960 /* SquatPosition_Three.mlmodel */,
 				4EBA94EF29C43259002A45F3 /* movenet_lightning.tflite */,
 				4EBA94EE29C43259002A45F3 /* movenet_thunder.tflite */,
 				4EBA94E729C43226002A45F3 /* MoveNet.swift */,
@@ -232,6 +264,9 @@
 				4EBA94E829C43226002A45F3 /* PoseData.swift */,
 				4EBA94E629C43225002A45F3 /* PoseNet.swift */,
 				4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */,
+				4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */,
+				4EABBA2C29C74AAA00ADB960 /* RepModel.swift */,
+				4EABBA4A29D6B02900ADB960 /* RepModel_dup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,9 +286,13 @@
 			children = (
 				4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */,
 				4EABBA2229C5A82500ADB960 /* Main.storyboard */,
-				4EABBA2329C5A86B00ADB960 /* OverlayView.swift */,
 				4EBA94E229C42D7A002A45F3 /* ViewController.swift */,
+				4EABBA3629C9BD6600ADB960 /* ViewController_Dup.swift */,
+				4EABBA4429D0176D00ADB960 /* ViewController_Dup2.swift */,
 				4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */,
+				4EABBA2329C5A86B00ADB960 /* OverlayView.swift */,
+				4EABBA2829C6C8D400ADB960 /* CorrectorView.swift */,
+				4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */,
 			);
 			path = SB_UI;
 			sourceTree = "<group>";
@@ -376,7 +415,6 @@
 				4E4BB7602997C6E9003EB516 /* PoseEstimation_Support in Resources */,
 				4EBA94FD29C4A314002A45F3 /* movenet_thunder.tflite in Resources */,
 				4EABBA2629C5A97B00ADB960 /* Main.storyboard in Resources */,
-				4EABBA2729C5A97D00ADB960 /* LaunchScreen_Prototype.storyboard in Resources */,
 				4EBA94FE29C4A316002A45F3 /* movenet_lightning.tflite in Resources */,
 				1BCD6B3528F7C8000055BC80 /* Assets.xcassets in Resources */,
 			);
@@ -428,24 +466,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED986CD292BD6DE0031E482 /* CameraFeedView.swift in Sources */,
 				4ED986CB292BD6CB0031E482 /* SettingsView.swift in Sources */,
 				4ED986CF292BD7050031E482 /* HomeView.swift in Sources */,
 				4EBA94EC29C43226002A45F3 /* PoseData.swift in Sources */,
 				4EABBA2529C5A94A00ADB960 /* OverlayView.swift in Sources */,
 				4ED986C9292BD2CE0031E482 /* MainView.swift in Sources */,
-				4EBA94E329C42D7A002A45F3 /* ViewController.swift in Sources */,
+				4EABBA5329D9C4EE00ADB960 /* SquatPosition_Three.mlmodel in Sources */,
+				4EABBA4729D017E400ADB960 /* ViewController_Dup2.swift in Sources */,
 				4EBA94F829C436BA002A45F3 /* AppDelegate.swift in Sources */,
 				4EBA94ED29C43226002A45F3 /* PoseConfig.swift in Sources */,
+				4EABBA5129D89F8500ADB960 /* SquatPosition_two.mlmodel in Sources */,
 				4EBA94FC29C49FA4002A45F3 /* ViewControllerWrapper.swift in Sources */,
 				4E4BB767299CA031003EB516 /* TrainerMenuView.swift in Sources */,
+				4EABBA4B29D6B02900ADB960 /* RepModel_dup.swift in Sources */,
 				4EBA94F429C433A1002A45F3 /* CGSize+TFLite.swift in Sources */,
+				4EABBA4929D0241C00ADB960 /* CameraFeedManager_Dup.swift in Sources */,
+				4EABBA3429C8B7F700ADB960 /* RepetitionEstimator.swift in Sources */,
 				4EBA94EB29C43226002A45F3 /* MoveNet.swift in Sources */,
 				4EBA94DD29C42355002A45F3 /* PoseEstimator.swift in Sources */,
 				4EBA94F529C433A1002A45F3 /* CVPixelBuffer+TFLite.swift in Sources */,
 				4EBA94EA29C43226002A45F3 /* PoseNet.swift in Sources */,
-				4EBA94FA29C43FA0002A45F3 /* CameraFeedManager.swift in Sources */,
+				4EABBA2929C6C8D400ADB960 /* CorrectorView.swift in Sources */,
 				1BCD6B3128F7C7FC0055BC80 /* PrototypeApp.swift in Sources */,
+				4EABBA4F29D7232100ADB960 /* SquatPosition.mlpackage in Sources */,
+				4EABBA4129D00F5D00ADB960 /* CameraSwitcher.swift in Sources */,
 				4EBA94F629C433A1002A45F3 /* Data+TFLite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

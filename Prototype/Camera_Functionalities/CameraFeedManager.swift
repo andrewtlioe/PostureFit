@@ -50,7 +50,7 @@ final class CameraFeedManager: NSObject, AVCaptureVideoDataOutputSampleBufferDel
   }
 
   let captureSession = AVCaptureSession()
-
+ 
   /// Initialize the capture session.
   private func configureSession() {
     captureSession.sessionPreset = AVCaptureSession.Preset.photo
@@ -81,6 +81,7 @@ final class CameraFeedManager: NSObject, AVCaptureVideoDataOutputSampleBufferDel
     if captureSession.canAddOutput(videoOutput) {
       captureSession.addOutput(videoOutput)
       videoOutput.connection(with: .video)?.videoOrientation = .portrait
+      //videoOutput.connection(with: .video)?.isVideoMirrored = true // activate for front camera
       captureSession.startRunning()
     }
     videoOutput.setSampleBufferDelegate(self, queue: dataOutputQueue)

@@ -18,9 +18,9 @@ import UIKit
 import os
 import SwiftUI
 
-//try using extension!!
 
-final class ViewController: UIViewController { // change from UIViewController
+final class ViewController: UIViewController {
+  @IBOutlet private weak var repetitionCounter: UILabel!
   
 
   // MARK: Storyboards Connections
@@ -50,6 +50,10 @@ final class ViewController: UIViewController { // change from UIViewController
   // Handles all data preprocessing and makes calls to run inference.
   private var poseEstimator: PoseEstimator?
   private var cameraFeedManager: CameraFeedManager!
+  
+  private var repetitionEstimator:RepetitionEstimator?
+  
+  //private var countEstimator: CountEstimator? // to get repetition count estimator and return to repetitionCounter: UILabel!
 
   // Serial queue to control all tasks related to the TFLite model.
   let queue = DispatchQueue(label: "serial_queue")
@@ -192,12 +196,53 @@ extension ViewController: CameraFeedManagerDelegate {
 
     // Guard to make sure that the pose estimator is already initialized.
     guard let estimator = poseEstimator else { return }
+    
+    // Guard to make sure that the repetition estimator is already initialized.
+    //guard let repEstimator = repetitionEstimator else { return }
+    
+    
+    
+    
+    // Run inference with concurrency to run multiple functions on screen. Currently only pose estimation and repetition estimation
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     // Run inference on a serial queue to avoid race condition.
     queue.async {
       self.isRunning = true
       defer { self.isRunning = false }
-
+      
       // Run pose estimation
       do {
         let (result, times) = try estimator.estimateSinglePose(
@@ -213,7 +258,7 @@ extension ViewController: CameraFeedManagerDelegate {
           
           self.keypointLabel.text = String(format: "%.3f", result.score)
           */
-          //remove from stack in SB
+          //removed from stack in SB
           
           // Allowed to set image and overlay
           let image = UIImage(ciImage: CIImage(cvPixelBuffer: pixelBuffer))
@@ -225,21 +270,45 @@ extension ViewController: CameraFeedManagerDelegate {
           }
 
           // Visualize the pose estimation result.
+          print("ViewController: overlayView.draw")
           self.overlayView.draw(at: image, person: result)
+          
         }
+        /*
+        //upDown return 0/1 for up or down position for testing currently
+        let upDown = try repEstimator.estimateRepetition(
+          on: result)
+        
+        DispatchQueue.main.async {
+          // Return up/down values to show in StoryBoard
+          self.repetitionCounter.text = String (format: "%@", arguments: [upDown])
+        }
+        */
+                
+        // possible location for counter implementation
+        
       } catch {
         os_log("Error running pose estimation.", type: .error)
         return
       }
     }
+    
+    
+    
+    
+    
+    
+    
   }
 }
 
+
+// default settings
 enum Constants {
   // Configs for the TFLite interpreter.
   static let defaultThreadCount = 4
   static let defaultDelegate: Delegates = .gpu
-  static let defaultModelType: ModelType = .movenetThunder
+  static let defaultModelType: ModelType = .movenetLighting
 
   // Minimum score to render the result.
   static let minimumScore: Float32 = 0.2

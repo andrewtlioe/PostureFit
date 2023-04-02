@@ -1,0 +1,168 @@
+{
+  "Outputs" : {
+    "position" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "classProbability" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "Inputs" : {
+    "y12" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c12" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c3" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x2" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y1" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x16" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c4" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x3" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y2" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y13" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c13" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c5" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x4" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y3" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y14" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c6" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x5" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y4" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c14" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c7" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x6" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y5" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x10" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y15" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c8" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x7" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y6" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c15" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x11" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c9" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x8" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y7" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y16" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c16" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x9" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y8" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x12" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y9" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x13" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y10" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c10" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c0" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x14" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y11" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c11" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c1" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x0" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x15" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "c2" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "x1" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "y0" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}
