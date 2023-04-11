@@ -10,9 +10,15 @@ import SwiftUI
 struct ViewControllerWrapper: UIViewControllerRepresentable {
   typealias UIViewControllerType = ViewController
   
+  var passedPosition : String = "Squat" //default
+  
   func makeUIViewController(context: Context) -> ViewController {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     let viewController = sb.instantiateViewController(identifier: "ViewController") as! ViewController
+    
+    
+    print("passedPosition: ", self.passedPosition)
+    viewController.selectedPosition = self.passedPosition
     return viewController
   }
   
@@ -21,8 +27,10 @@ struct ViewControllerWrapper: UIViewControllerRepresentable {
   }
 }
 
+/*
 struct ViewControllerWrapper_Previews: PreviewProvider {
     static var previews: some View {
         ViewControllerWrapper()
     }
 }
+*/

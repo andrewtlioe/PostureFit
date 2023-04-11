@@ -7,11 +7,29 @@
 
 import SwiftUI
 
+struct MyVariables {
+  static var voiceCounter = true
+}
+
 struct SettingsView: View {
+  
+  @State private var voiceCounter = MyVariables.voiceCounter
+  
     var body: some View {
         NavigationView {
-            Text("SettingsView")
-            .navigationTitle(Text("Settings"))
+          List {
+            HStack {
+              Label ("Counter Sound", systemImage: "speaker")
+              Spacer ()
+              Toggle(isOn: $voiceCounter) { }
+            }
+          }
+        }
+        .navigationTitle (Text("Train"))
+        .toolbar {
+          Button("Save") {
+            MyVariables.voiceCounter = voiceCounter
+          }
         }
     }
 }

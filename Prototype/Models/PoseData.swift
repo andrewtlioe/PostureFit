@@ -63,3 +63,25 @@ struct Person {
   var keyPoints: [KeyPoint]
   var score: Float32
 }
+
+
+struct needCorrectionPart {
+  var bodyPart: BodyPart = .nose
+  //var coordinate: CGPoint = .zero
+  //var direction: Direction = .left
+  var direction = Direction.left
+}
+
+/// An struct describing a body part (e.g. nose, left eye etc.).
+enum Direction {
+  static let left = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
+  static let right = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
+  static let up = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
+  static let down = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
+  
+  static let upLeft = (from: (x_adj: -30.0, y_adj: -30.0), to: (x_adj: 30.0, y_adj: 30.0)) // for upLeft
+  static let upRight = (from: (x_adj: -30.0, y_adj: 30.0), to: (x_adj: 30.0, y_adj: -30.0)) // for upRight
+  static let downLeft = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
+  static let downRight = (from: (x_adj: 30.0, y_adj: 30.0), to: (x_adj: -30.0, y_adj: -30.0)) // for downRight
+} // need correction on adjustment parameters
+

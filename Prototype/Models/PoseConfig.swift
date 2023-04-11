@@ -38,3 +38,9 @@ enum ModelType: String, CaseIterable {
   case movenetThunder = "Thunder"  // Movenet thunder
 }
 
+/// Type of the pose estimation model to be used.
+enum repCorModelType: String, CaseIterable {
+  case squat = "squat" // DeadliftModel_Controller
+  case deadlift = "deadlift" // SquatModel_Controller
+}
+

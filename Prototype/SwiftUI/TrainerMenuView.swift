@@ -15,23 +15,47 @@ struct TrainerMenuView: View {
     NavigationView {
       //Text("TrainerView")
       
-      VStack{
-        NavigationLink{
-          //CameraFeedView(image: model.frame)
-          ViewControllerWrapper()
-        } label:{
-          Image(systemName: "play.circle.fill")
-            .resizable()
-            .frame(width: 200.0, height: 200.0)
-            .foregroundColor(.black)
+      VStack (spacing: 50){
+        NavigationLink(destination: ViewControllerWrapper(passedPosition: "Squat")) {
+          
+          HStack {
+                  
+            Image("Squat")
+              .resizable()
+              .frame(width: 100.0, height: 100.0)
+            Text("Squat")
+              .font(.system(.title, design: .rounded))
+              }
+          .padding()
+          .foregroundColor(.white)
+          .background(Color.gray)
+          .cornerRadius(.infinity)
         }
         
-        .navigationTitle(Text("Train"))
         
+        NavigationLink(destination: ViewControllerWrapper(passedPosition: "Deadlift")) {
+          
+          HStack {
+                  
+            Image("Deadlift")
+              .resizable()
+              .frame(width: 100.0, height: 100.0)
+            Text("Deadlift")
+              .font(.system(.title, design: .rounded))
+              }
+          .padding()
+          .foregroundColor(.white)
+          .background(Color.gray)
+          .cornerRadius(.infinity)
+        }
+        
+        
+        .navigationTitle(Text("Train"))
       }
       
     }
   }
+  
 }
 
 
@@ -42,3 +66,27 @@ struct TrainerMenuView_Previews: PreviewProvider {
         TrainerMenuView()
     }
 }
+
+/*
+ NavigationLink{
+   //CameraFeedView(image: model.frame)
+   ViewControllerWrapper()
+ } label: {
+   /*
+   Image(systemName: "play.circle.fill")
+     .resizable()
+     .frame(width: 200.0, height: 200.0)
+     .foregroundColor(.black)*/
+   
+   HStack {
+           
+     Image("Deadlift")
+       .resizable()
+       .frame(width: 100.0, height: 100.0)
+     Text("Deadlift")
+       }
+   .padding()
+   .foregroundColor(.white)
+   .background(Color.gray)
+   .cornerRadius(.infinity)
+ */
