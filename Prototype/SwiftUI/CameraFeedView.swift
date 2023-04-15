@@ -15,17 +15,6 @@ struct CameraFeedView: View {
         NavigationView {
           
           VStack{
-            
-            /*HStack{
-              NavigationLink{
-                //print("startSet")
-                TrainerMenuView()
-              } label:{
-                Text("back").padding([.leading])
-                Spacer()
-              }
-            }*/
-            
             if let image = image {
               Image(image, scale: 1.0, orientation: .up, label: label)
                 .ignoresSafeArea()
@@ -34,7 +23,7 @@ struct CameraFeedView: View {
             }
             
           }
-        }//.navigationTitle(Text("Train"))
+        }
     }
 }
 

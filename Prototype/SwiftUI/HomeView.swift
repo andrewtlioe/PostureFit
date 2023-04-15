@@ -45,7 +45,6 @@ struct HomeView: View {
             .background(Color(hue: 0.719, saturation: 0.002, brightness: 0.943).edgesIgnoringSafeArea(.all))
             
             .navigationTitle(Text("Home"))
-            //.navigationBarItems(trailing:)
         }//navigationview
         
     }

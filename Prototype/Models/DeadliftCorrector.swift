@@ -1,14 +1,14 @@
 //
-//  SquatCorrector.swift
+//  DeadliftCorrector.swift
 //  PostureFit
 //
-//  Created by Andrew Tian Lioe on 4/11/23.
+//  Created by Andrew Tian Lioe on 4/16/23.
 //
 
 import UIKit
 
 
-final class SquatCorrector: CorrectionEstimator {
+final class DeadliftCorrector: CorrectionEstimator {
   
   var wasInBottomPosition = false
   @Published var squatCount = 0
@@ -91,14 +91,14 @@ final class SquatCorrector: CorrectionEstimator {
       }
     }
     
-    ///All correction only consider face facing left side of screen, i.e. facing  Xnegative side
+    ///All correction only consider left side of body
     
     ///For pts. 1, 2 and 3; referring to the squat journal by Myer et al. (2014). Lacking a toe keypoint in MoveNet
     var noseCorrection: needCorrectionPart = needCorrectionPart()
     
-    if nose.x+10 <= leftKnee.x {
+    if (nose.y - leftKnee.y) <= 20 {
       noseCorrection.bodyPart = .nose
-      noseCorrection.direction = Direction.right //need to be right after fix of arrows
+      noseCorrection.direction = Direction.up //need to be right after fix of arrows
       
       needCorrectionParts.append(noseCorrection)
       
@@ -118,4 +118,5 @@ final class SquatCorrector: CorrectionEstimator {
   
   
 }
+
 

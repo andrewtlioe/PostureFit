@@ -26,11 +26,3 @@ struct ViewControllerWrapper: UIViewControllerRepresentable {
     
   }
 }
-
-/*
-struct ViewControllerWrapper_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewControllerWrapper()
-    }
-}
-*/

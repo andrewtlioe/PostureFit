@@ -23,11 +23,12 @@
 		4EABBA5529DB19EF00ADB960 /* SquatPosition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA5429DB19EF00ADB960 /* SquatPosition.mlmodel */; };
 		4EABBA5729DD940B00ADB960 /* DeadliftModel_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA5629DD940B00ADB960 /* DeadliftModel_Controller.swift */; };
 		4EABBA5A29DF0C8500ADB960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EABBA2229C5A82500ADB960 /* Main.storyboard */; };
-		4EABBA5E29DF0FD700ADB960 /* OverlayView_dup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA2829C6C8D400ADB960 /* OverlayView_dup.swift */; };
 		4EABBA6029E138EE00ADB960 /* ArrowPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA5F29E138EE00ADB960 /* ArrowPath.swift */; };
 		4EABBA6329E43F0700ADB960 /* DeadliftPosition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA6229E43F0600ADB960 /* DeadliftPosition.mlmodel */; };
 		4EABBA6529E5287E00ADB960 /* SquatCorrector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA6429E5287E00ADB960 /* SquatCorrector.swift */; };
 		4EABBA6729E5A28E00ADB960 /* CorrectionEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA6629E5A28E00ADB960 /* CorrectionEstimator.swift */; };
+		4EABBA6D29E969D100ADB960 /* OverlayView_dup2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA6C29E969D100ADB960 /* OverlayView_dup2.swift */; };
+		4EABBA6F29EB04E200ADB960 /* DeadliftCorrector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA6E29EB04E200ADB960 /* DeadliftCorrector.swift */; };
 		4EBA94DD29C42355002A45F3 /* PoseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */; };
 		4EBA94EA29C43226002A45F3 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E629C43225002A45F3 /* PoseNet.swift */; };
 		4EBA94EB29C43226002A45F3 /* MoveNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA94E729C43226002A45F3 /* MoveNet.swift */; };
@@ -92,11 +93,13 @@
 		4EABBA4A29D6B02900ADB960 /* SquatModel_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatModel_Controller.swift; sourceTree = "<group>"; };
 		4EABBA5429DB19EF00ADB960 /* SquatPosition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SquatPosition.mlmodel; sourceTree = "<group>"; };
 		4EABBA5629DD940B00ADB960 /* DeadliftModel_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadliftModel_Controller.swift; sourceTree = "<group>"; };
-		4EABBA5829DF0AE700ADB960 /* MainCopy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainCopy.storyboard; sourceTree = "<group>"; };
 		4EABBA5F29E138EE00ADB960 /* ArrowPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowPath.swift; sourceTree = "<group>"; };
 		4EABBA6229E43F0600ADB960 /* DeadliftPosition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeadliftPosition.mlmodel; sourceTree = "<group>"; };
 		4EABBA6429E5287E00ADB960 /* SquatCorrector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatCorrector.swift; sourceTree = "<group>"; };
 		4EABBA6629E5A28E00ADB960 /* CorrectionEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionEstimator.swift; sourceTree = "<group>"; };
+		4EABBA6929E91B5900ADB960 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		4EABBA6C29E969D100ADB960 /* OverlayView_dup2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView_dup2.swift; sourceTree = "<group>"; };
+		4EABBA6E29EB04E200ADB960 /* DeadliftCorrector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadliftCorrector.swift; sourceTree = "<group>"; };
 		4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWrapper.swift; sourceTree = "<group>"; };
 		4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseEstimator.swift; sourceTree = "<group>"; };
 		4EBA94DE29C4237A002A45F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -241,6 +244,7 @@
 			children = (
 				1BCD6B3028F7C7FC0055BC80 /* PrototypeApp.swift */,
 				1BCD6B3228F7C7FC0055BC80 /* ContentView.swift */,
+				4EABBA6929E91B5900ADB960 /* SplashScreen.swift */,
 				4ED986C8292BD2CE0031E482 /* MainView.swift */,
 				4ED986CE292BD7050031E482 /* HomeView.swift */,
 				4ED986CA292BD6CB0031E482 /* SettingsView.swift */,
@@ -275,6 +279,7 @@
 				4EABBA4A29D6B02900ADB960 /* SquatModel_Controller.swift */,
 				4EABBA5629DD940B00ADB960 /* DeadliftModel_Controller.swift */,
 				4EABBA6429E5287E00ADB960 /* SquatCorrector.swift */,
+				4EABBA6E29EB04E200ADB960 /* DeadliftCorrector.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,7 +297,6 @@
 		4EBA94FF29C5A7D6002A45F3 /* SB_UI */ = {
 			isa = PBXGroup;
 			children = (
-				4EABBA5829DF0AE700ADB960 /* MainCopy.storyboard */,
 				4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */,
 				4EABBA2229C5A82500ADB960 /* Main.storyboard */,
 				4EBA94E229C42D7A002A45F3 /* ViewController.swift */,
@@ -301,6 +305,7 @@
 				4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */,
 				4EABBA2329C5A86B00ADB960 /* OverlayView.swift */,
 				4EABBA2829C6C8D400ADB960 /* OverlayView_dup.swift */,
+				4EABBA6C29E969D100ADB960 /* OverlayView_dup2.swift */,
 				4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */,
 				4EABBA5F29E138EE00ADB960 /* ArrowPath.swift */,
 			);
@@ -494,12 +499,13 @@
 				4EBA94EB29C43226002A45F3 /* MoveNet.swift in Sources */,
 				4EBA94DD29C42355002A45F3 /* PoseEstimator.swift in Sources */,
 				4EABBA5529DB19EF00ADB960 /* SquatPosition.mlmodel in Sources */,
+				4EABBA6F29EB04E200ADB960 /* DeadliftCorrector.swift in Sources */,
 				4EBA94F529C433A1002A45F3 /* CVPixelBuffer+TFLite.swift in Sources */,
 				4EABBA6029E138EE00ADB960 /* ArrowPath.swift in Sources */,
-				4EABBA5E29DF0FD700ADB960 /* OverlayView_dup.swift in Sources */,
 				4EBA94EA29C43226002A45F3 /* PoseNet.swift in Sources */,
 				1BCD6B3128F7C7FC0055BC80 /* PrototypeApp.swift in Sources */,
 				4EABBA6329E43F0700ADB960 /* DeadliftPosition.mlmodel in Sources */,
+				4EABBA6D29E969D100ADB960 /* OverlayView_dup2.swift in Sources */,
 				4EABBA6729E5A28E00ADB960 /* CorrectionEstimator.swift in Sources */,
 				4EABBA4129D00F5D00ADB960 /* CameraSwitcher.swift in Sources */,
 				4EBA94F629C433A1002A45F3 /* Data+TFLite.swift in Sources */,

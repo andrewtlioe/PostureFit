@@ -58,6 +58,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpO-jN-OpC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="ResetCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Av1-xD-GLr"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="GP5-U5-8tj" firstAttribute="top" secondItem="WTv-0a-zbe" secondAttribute="bottom" constant="3" id="NEd-ZF-ppq"/>

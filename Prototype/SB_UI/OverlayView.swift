@@ -17,7 +17,7 @@ import UIKit
 import os
 
 /// Custom view to visualize the pose estimation result on top of the input image.
-class OverlayView: UIImageView {
+class OverlayViewLines: UIImageView {
 
   /// Visualization configs
   private enum Config {

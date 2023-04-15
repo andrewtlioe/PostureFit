@@ -96,11 +96,13 @@ final class ViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    UIApplication.shared.isIdleTimerDisabled = true
     cameraFeedManager?.startRunning()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
+    UIApplication.shared.isIdleTimerDisabled = false
     cameraFeedManager?.stopRunning()
   }
 
@@ -121,7 +123,7 @@ final class ViewController: UIViewController {
       self.correctionEstimator = SquatCorrector()
     } else {
       self.repetitionEstimator = DeadliftModel_Controller() //for squat
-      self.correctionEstimator = SquatCorrector() //change to DeadliftCorrector() when ready
+      self.correctionEstimator = DeadliftCorrector() //change to DeadliftCorrector() when ready
     }
   }
   
@@ -142,6 +144,14 @@ final class ViewController: UIViewController {
         
       } catch let error {
         os_log("Error: %@", log: .default, type: .error, String(describing: error))
+      }
+    }
+  }
+  
+  private func resetCounter(){
+    queue.async{
+      do{
+        self.counter = 0
       }
     }
   }
@@ -207,6 +217,10 @@ final class ViewController: UIViewController {
     updateCamera()
   }
   
+  
+  @IBAction func ResetCounter(_ sender: UIButton) {
+    resetCounter()
+  }
   
 }
 

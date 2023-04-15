@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "PostureFit_Logo.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "PostureFit_LogoBig.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

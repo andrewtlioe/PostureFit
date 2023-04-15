@@ -7,29 +7,51 @@
 
 import SwiftUI
 
+/// Off by default
 struct MyVariables {
-  static var voiceCounter = true
+  static var voiceCounter = false
+  static var overlayGuide = false
 }
 
 struct SettingsView: View {
   
   @State private var voiceCounter = MyVariables.voiceCounter
+  @State private var overlayGuide = MyVariables.overlayGuide
   
     var body: some View {
-        NavigationView {
+      NavigationView{
+        
           List {
-            HStack {
-              Label ("Counter Sound", systemImage: "speaker")
-              Spacer ()
-              Toggle(isOn: $voiceCounter) { }
+            Section{
+              HStack {
+                Label("Counter Sound", systemImage: "speaker.wave.2.fill").foregroundColor(.black)
+                Spacer()
+                Toggle(isOn: $voiceCounter) { }
+              }
+            } footer: {
+              Text("Enable repetition counter voice feedback.")
             }
+            
+            Section{
+              HStack {
+                Label("Overlay", systemImage: "line.diagonal.arrow").foregroundColor(.black)
+                Spacer()
+                Toggle(isOn: $overlayGuide) { }
+              }
+            } footer: {
+              Text("Enable overlay lines and dots onto person in frame.")
+            }
+            
           }
-        }
-        .navigationTitle (Text("Train"))
+        
+        .navigationTitle (Text("Settings"))
         .toolbar {
-          Button("Save") {
+          Button("Apply") {
             MyVariables.voiceCounter = voiceCounter
+            MyVariables.overlayGuide = overlayGuide
           }
+      }
+        
         }
     }
 }

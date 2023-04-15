@@ -72,16 +72,17 @@ struct needCorrectionPart {
   var direction = Direction.left
 }
 
-/// An struct describing a body part (e.g. nose, left eye etc.).
+/// Adjustments for arrow direction
 enum Direction {
-  static let left = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
-  static let right = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
-  static let up = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
-  static let down = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
+  static let left = (from: (x_adj: 70.0, y_adj: 0.0), to: (x_adj: -70.0, y_adj: 0.0))
+  static let right = (from: (x_adj: -70.0, y_adj: 0.0), to: (x_adj: 70.0, y_adj: 0.0))
+  static let up = (from: (x_adj: 0.0, y_adj: 70.0), to: (x_adj: 0.0, y_adj: -70.0))
+  static let down = (from: (x_adj: 0.0, y_adj: -70.0), to: (x_adj: 0.0, y_adj: 70.0))
   
-  static let upLeft = (from: (x_adj: -30.0, y_adj: -30.0), to: (x_adj: 30.0, y_adj: 30.0)) // for upLeft
-  static let upRight = (from: (x_adj: -30.0, y_adj: 30.0), to: (x_adj: 30.0, y_adj: -30.0)) // for upRight
-  static let downLeft = (from: (x_adj: 30.0, y_adj: -30.0), to: (x_adj: -30.0, y_adj: 30.0)) // for downLeft
-  static let downRight = (from: (x_adj: 30.0, y_adj: 30.0), to: (x_adj: -30.0, y_adj: -30.0)) // for downRight
+  static let upLeft = (from: (x_adj: 50.0, y_adj: 50.0), to: (x_adj: -50.0, y_adj: -50.0))
+  static let upRight = (from: (x_adj: -50.0, y_adj: 50.0), to: (x_adj: 50.0, y_adj: -50.0))
+  static let downLeft = (from: (x_adj: 50.0, y_adj: -50.0), to: (x_adj: -50.0, y_adj: 50.0))
+  static let downRight = (from: (x_adj: -50.0, y_adj: -50.0), to: (x_adj: 50.0, y_adj: 50.0))
+  static let noAdj = (from: (x_adj: 0, y_adj: 0), to: (x_adj: 0, y_adj: 0))
 } // need correction on adjustment parameters
 
