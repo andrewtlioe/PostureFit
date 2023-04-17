@@ -17,7 +17,6 @@ final class ViewController: UIViewController {
   @IBOutlet private weak var overlayView: OverlayView!
   @IBOutlet private weak var threadStepperLabel: UILabel!
   @IBOutlet private weak var threadStepper: UIStepper!
-  @IBOutlet private weak var totalTimeLabel: UILabel!
   @IBOutlet private weak var scoreLabel: UILabel!
   @IBOutlet private weak var keypointLabel: UILabel!
   @IBOutlet private weak var delegatesSegmentedControl: UISegmentedControl!
@@ -63,14 +62,6 @@ final class ViewController: UIViewController {
   private var needCorrectionParts3 = needCorrectionPart()
   private var needCorrectionParts4 = needCorrectionPart()
   private var needCorrectionParts5 = needCorrectionPart()
-  
-  //private var repetitionCounter: Int = 0
-  
-  //private var timer: Timer
-  
-  private var timer: Timer = Timer()
-  var count:Int = 0
-  var timerCounting:Bool = false
   
   
   var estimate = [0,0,0,0,0,0,0,0,0,0]
@@ -250,9 +241,6 @@ extension ViewController: CameraFeedManagerDelegate {
       self.isRunning = true
       defer { self.isRunning = false }
       
-      //print("self.startTimer()")
-      self.startTimer()
-      
       // Run pose estimation
       do {
         let (result, _ ) = try estimator.estimateSinglePose(
@@ -307,7 +295,8 @@ extension ViewController: CameraFeedManagerDelegate {
           
           // possible location for arrow drawing
           //let count = self.runCounter(person: result)
-          let correct = self.runCorrector(at: image, person: result) //slow
+          
+          let correct = self.runCorrector(at: image, person: result) //, position: Int(count))
           
           
           
@@ -315,7 +304,7 @@ extension ViewController: CameraFeedManagerDelegate {
         
         // possible location for counter implementation
         let count = self.runCounter(person: result)
-        
+      
         //let correct = self.runCorrector(at: image, person: result)
         
       } catch {
@@ -323,8 +312,6 @@ extension ViewController: CameraFeedManagerDelegate {
         return
       }
     }
-    
-    self.stopTimer()
   }
   
   
@@ -359,72 +346,26 @@ extension ViewController: CameraFeedManagerDelegate {
     
   }
   
-  
-  
-  
-  
-  
-  
-  /*
-  
-  private func runCounter(person: Person) {
-    print("ViewController_dup: In runCounter")
-    
-    // Guard to make sure that the repetition estimator is already initialized.
-    guard let repEstimator = repetitionEstimator else { print ("return"); return } //how to add deadlift too
-    
-    // array to store returned values in upDown for Majority Voting
-    var voteRepetitionCounter = [Int](repeating: 0, count: 10)
-    
-    // Run inference with concurrency to run multiple functions on screen. Currently only pose estimation and repetition estimation
-    do {
-      //upDown return 0/1 for up or down position for testing currently
-      let upDown = try repEstimator.estimateRepetition(
-        on: person)
-      
-      
-      
-      DispatchQueue.main.async {
-        // Return up/down values to show in StoryBoard
-        
-        print("upDown: ", upDown)
-        
-        //voteRepetitionCounter.append(Int(upDown)!) //force unwrap to Int
-        
-        //let counts = voteRepetitionCounter.reduce(into: [:]) { counts, updown in counts[updown, default: 0] += 1 }
-        
-        self.repetitionCounter.text = String(upDown)
-      }
-      
-      
-    } catch {
-      os_log("Error running counter estimation.", type: .error)
-    }
-    
-  }
-   
-  */
-  
-  
-  
+
   
   
   private func runCounter(person: Person) {
     print("ViewController_dup: In runCounter")
     
     // Guard to make sure that the repetition estimator is already initialized.
-    guard let repEstimator = repetitionEstimator else { print ("return"); return } //how to add deadlift too
+    guard let repEstimator = repetitionEstimator else { print ("return"); return }
     
     // array to store returned values in upDown for Majority Voting
     var voteRepetitionCounter = [Int](repeating: 0, count: 10)
+    var position: Int
     
-    // Run inference with concurrency to run multiple functions on screen. Currently only pose estimation and repetition estimation
+    // Run inference with concurrency to run multiple functions on screen
     do {
       //upDown return 0/1 for up or down position for testing currently
       let upDown = try repEstimator.estimateRepetition(
         on: person)
       
-      
+      position = Int (upDown)!
       
       DispatchQueue.main.async {
         // Return up/down values to show in StoryBoard
@@ -453,56 +394,6 @@ extension ViewController: CameraFeedManagerDelegate {
     }
     
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  private func startTimer (){
-    //print("In startTimer()")
-    timerCounting = true
-    DispatchQueue.main.async {
-      self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerCounter), userInfo: nil, repeats: true)
-    }
-  }
-  
-  private func stopTimer (){
-    //print("In stopTimer()")
-    timerCounting = false
-    DispatchQueue.main.async {
-      self.timer.invalidate()
-    }
-  }
-  
-  @objc func timerCounter() -> Void
-    {
-      //print("In timerCounter()")
-      count = count + 1
-      let time = self.secondsToHoursMinutesSeconds(seconds: count)
-      let timeString = self.makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
-      self.timerLabel.text = String(timeString)
-      //print(timeString)
-    }
-  
-  func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int)
-    {
-      return ((seconds / 3600), ((seconds % 3600) / 60),((seconds % 3600) % 60))
-    }
-    
-  func makeTimeString(hours: Int, minutes: Int, seconds : Int) -> String
-    {
-      var timeString = ""
-      timeString += String(format: "%02d", hours)
-      timeString += " : "
-      timeString += String(format: "%02d", minutes)
-      timeString += " : "
-      timeString += String(format: "%02d", seconds)
-      return timeString
-    }
   
   
 }

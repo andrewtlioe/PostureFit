@@ -25,21 +25,16 @@ final class SquatCorrector: CorrectionEstimator {
     
     var rightKnee = KeyPoint.init(bodyPart: .rightKnee).coordinate
     var leftKnee = KeyPoint.init(bodyPart: .leftKnee).coordinate
+    var leftHip = KeyPoint.init(bodyPart: .leftHip).coordinate
     var rightHip = KeyPoint.init(bodyPart: .rightHip).coordinate
     var rightAnkle = KeyPoint.init(bodyPart: .rightAnkle).coordinate
     var leftAnkle = KeyPoint.init(bodyPart: .leftAnkle).coordinate
-    
+    var leftShoulder = KeyPoint.init(bodyPart: .leftShoulder).coordinate
     var nose = KeyPoint.init(bodyPart: .nose).coordinate
     
     var needCorrectionParts = [needCorrectionPart]()
     
     for (index, part) in BodyPart.allCases.enumerated() {
-      /*
-       let position = CGPoint(
-       x: result.keyPoints[index].coordinate.x,
-       y: result.keyPoints[index].coordinate.y)
-       */
-      //print(index, part)
       
       switch (part) {
       case .rightKnee:
@@ -75,7 +70,7 @@ final class SquatCorrector: CorrectionEstimator {
       case .rightEar:
         continue
       case .leftShoulder:
-        continue
+        leftShoulder = result.keyPoints[index].coordinate
       case .rightShoulder:
         continue
       case .leftElbow:
@@ -87,24 +82,34 @@ final class SquatCorrector: CorrectionEstimator {
       case .rightWrist:
         continue
       case .leftHip:
-        continue
+        leftHip = result.keyPoints[index].coordinate
       }
     }
     
     ///All correction only consider face facing left side of screen, i.e. facing  Xnegative side
     
     ///For pts. 1, 2 and 3; referring to the squat journal by Myer et al. (2014). Lacking a toe keypoint in MoveNet
-    var noseCorrection: needCorrectionPart = needCorrectionPart()
+    var partCorrection: needCorrectionPart = needCorrectionPart()
     
-    if nose.x+10 <= leftKnee.x {
-      noseCorrection.bodyPart = .nose
-      noseCorrection.direction = Direction.right //need to be right after fix of arrows
+    /// At bottom angles
+    if leftHip.y+150 >= leftKnee.y { // need to get threshold for bottom position; should get from model but no time
       
-      needCorrectionParts.append(noseCorrection)
+      if nose.x+150 <= leftKnee.x {
+        partCorrection.bodyPart = .nose
+        partCorrection.direction = Direction.right
+        
+        needCorrectionParts.append(partCorrection)
+        
+      }
+      
+      if leftHip.y+30 >= leftKnee.y{
+        partCorrection.bodyPart = .leftHip
+        partCorrection.direction = Direction.up
+        
+        needCorrectionParts.append(partCorrection)
+      }
       
     }
-    
-    
     
     print("needCorrectionParts: ", needCorrectionParts)
     return (needCorrectionParts)

@@ -65,6 +65,9 @@ struct Person {
 }
 
 
+
+///Self edited
+
 struct needCorrectionPart {
   var bodyPart: BodyPart = .nose
   //var coordinate: CGPoint = .zero

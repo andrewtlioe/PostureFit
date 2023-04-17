@@ -77,6 +77,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen_Prototype-logo" width="224.01400756835938" height="201.43699645996094"/>
+        <image name="LaunchScreen_Prototype-logo" width="90" height="90"/>
     </resources>
 </document>

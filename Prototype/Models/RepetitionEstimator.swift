@@ -12,14 +12,3 @@ protocol RepetitionEstimator {
   func estimateRepetition(on result: Person) throws -> (String)
   
 }
-
-
-/*
-// MARK: - Custom Errors
-enum PoseEstimationError: Error {
-  case modelBusy
-  case preprocessingFailed
-  case inferenceFailed
-  case postProcessingFailed
-}
-*/

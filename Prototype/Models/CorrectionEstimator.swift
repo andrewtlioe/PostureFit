@@ -12,15 +12,3 @@ protocol CorrectionEstimator {
   func estimateCorrection(on result: Person) throws -> ([needCorrectionPart])
   
 }
-
-
-/*
-// MARK: - Custom Errors
-enum PoseEstimationError: Error {
-  case modelBusy
-  case preprocessingFailed
-  case inferenceFailed
-  case postProcessingFailed
-}
-*/
-

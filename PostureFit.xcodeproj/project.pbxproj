@@ -43,7 +43,6 @@
 		4EBA94FE29C4A316002A45F3 /* movenet_lightning.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA94EF29C43259002A45F3 /* movenet_lightning.tflite */; };
 		4ED986C9292BD2CE0031E482 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986C8292BD2CE0031E482 /* MainView.swift */; };
 		4ED986CB292BD6CB0031E482 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986CA292BD6CB0031E482 /* SettingsView.swift */; };
-		4ED986CF292BD7050031E482 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED986CE292BD7050031E482 /* HomeView.swift */; };
 		6F823CE26214AEA5C22E2514 /* Pods_PostureFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691CE6707C34463ED93FCAAE /* Pods_PostureFit.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 /* Begin PBXFileReference section */
 		1BCD6B2D28F7C7FC0055BC80 /* PostureFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostureFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCD6B3028F7C7FC0055BC80 /* PrototypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeApp.swift; sourceTree = "<group>"; };
-		1BCD6B3228F7C7FC0055BC80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1BCD6B3428F7C8000055BC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BCD6B3728F7C8000055BC80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BCD6B3D28F7C8000055BC80 /* PostureFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostureFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,17 +74,9 @@
 		1BCD6B4B28F7C8000055BC80 /* PrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeUITests.swift; sourceTree = "<group>"; };
 		1BCD6B4D28F7C8000055BC80 /* PrototypeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4E4BB75F2997C6E9003EB516 /* PoseEstimation_Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PoseEstimation_Support; sourceTree = "<group>"; };
-		4E4BB7622997CE34003EB516 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
-		4E4BB7642998B849003EB516 /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
 		4E4BB766299CA031003EB516 /* TrainerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerMenuView.swift; sourceTree = "<group>"; };
 		4EABBA2229C5A82500ADB960 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4EABBA2329C5A86B00ADB960 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
-		4EABBA2829C6C8D400ADB960 /* OverlayView_dup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView_dup.swift; sourceTree = "<group>"; };
-		4EABBA2C29C74AAA00ADB960 /* RepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepModel.swift; sourceTree = "<group>"; };
 		4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionEstimator.swift; sourceTree = "<group>"; };
-		4EABBA3629C9BD6600ADB960 /* ViewController_Dup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Dup.swift; sourceTree = "<group>"; };
-		4EABBA3B29CF605500ADB960 /* CameraFeedManager_back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager_back.swift; sourceTree = "<group>"; };
-		4EABBA3D29CF6FE800ADB960 /* CameraFeedManager_front.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager_front.swift; sourceTree = "<group>"; };
 		4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSwitcher.swift; sourceTree = "<group>"; };
 		4EABBA4429D0176D00ADB960 /* ViewController_Dup2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Dup2.swift; sourceTree = "<group>"; };
 		4EABBA4829D0241C00ADB960 /* CameraFeedManager_Dup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager_Dup.swift; sourceTree = "<group>"; };
@@ -97,13 +87,10 @@
 		4EABBA6229E43F0600ADB960 /* DeadliftPosition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeadliftPosition.mlmodel; sourceTree = "<group>"; };
 		4EABBA6429E5287E00ADB960 /* SquatCorrector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatCorrector.swift; sourceTree = "<group>"; };
 		4EABBA6629E5A28E00ADB960 /* CorrectionEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionEstimator.swift; sourceTree = "<group>"; };
-		4EABBA6929E91B5900ADB960 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		4EABBA6C29E969D100ADB960 /* OverlayView_dup2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView_dup2.swift; sourceTree = "<group>"; };
 		4EABBA6E29EB04E200ADB960 /* DeadliftCorrector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadliftCorrector.swift; sourceTree = "<group>"; };
-		4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWrapper.swift; sourceTree = "<group>"; };
 		4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseEstimator.swift; sourceTree = "<group>"; };
 		4EBA94DE29C4237A002A45F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4EBA94E229C42D7A002A45F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EBA94E629C43225002A45F3 /* PoseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		4EBA94E729C43226002A45F3 /* MoveNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveNet.swift; sourceTree = "<group>"; };
 		4EBA94E829C43226002A45F3 /* PoseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseData.swift; sourceTree = "<group>"; };
@@ -114,13 +101,10 @@
 		4EBA94F229C433A1002A45F3 /* CVPixelBuffer+TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+TFLite.swift"; sourceTree = "<group>"; };
 		4EBA94F329C433A1002A45F3 /* Data+TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+TFLite.swift"; sourceTree = "<group>"; };
 		4EBA94F729C436BA002A45F3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EBA94F929C43FA0002A45F3 /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
 		4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen_Prototype.storyboard; sourceTree = "<group>"; };
 		4ED986C8292BD2CE0031E482 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4ED986CA292BD6CB0031E482 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		4ED986CC292BD6DE0031E482 /* CameraFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedView.swift; sourceTree = "<group>"; };
-		4ED986CE292BD7050031E482 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		691CE6707C34463ED93FCAAE /* Pods_PostureFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostureFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E8341E76E09F2E09608B74 /* Pods-PostureFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostureFit.debug.xcconfig"; path = "Target Support Files/Pods-PostureFit/Pods-PostureFit.debug.xcconfig"; sourceTree = "<group>"; };
 		D7533E67210374A0595A0B46 /* Pods-PostureFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostureFit.release.xcconfig"; path = "Target Support Files/Pods-PostureFit/Pods-PostureFit.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,7 +174,6 @@
 				4EBA94F729C436BA002A45F3 /* AppDelegate.swift */,
 				4EABBA2429C5A89D00ADB960 /* SwiftUI */,
 				4EBA94FF29C5A7D6002A45F3 /* SB_UI */,
-				4EABBA3829CF577A00ADB960 /* Functions */,
 				4EBA94F029C43373002A45F3 /* Extensions */,
 				4EBA94DB29C42345002A45F3 /* Models */,
 				4E4BB7612997CDFF003EB516 /* Camera_Functionalities */,
@@ -229,12 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				4EABBA4829D0241C00ADB960 /* CameraFeedManager_Dup.swift */,
-				4EBA94F929C43FA0002A45F3 /* CameraFeedManager.swift */,
-				4EABBA3B29CF605500ADB960 /* CameraFeedManager_back.swift */,
-				4EABBA3D29CF6FE800ADB960 /* CameraFeedManager_front.swift */,
-				4E4BB7642998B849003EB516 /* FrameHandler.swift */,
-				4E4BB7622997CE34003EB516 /* CameraManager.swift */,
-				4EBA94D929C41F09002A45F3 /* CameraWrapper.swift */,
 			);
 			path = Camera_Functionalities;
 			sourceTree = "<group>";
@@ -243,22 +220,11 @@
 			isa = PBXGroup;
 			children = (
 				1BCD6B3028F7C7FC0055BC80 /* PrototypeApp.swift */,
-				1BCD6B3228F7C7FC0055BC80 /* ContentView.swift */,
-				4EABBA6929E91B5900ADB960 /* SplashScreen.swift */,
 				4ED986C8292BD2CE0031E482 /* MainView.swift */,
-				4ED986CE292BD7050031E482 /* HomeView.swift */,
 				4ED986CA292BD6CB0031E482 /* SettingsView.swift */,
-				4ED986CC292BD6DE0031E482 /* CameraFeedView.swift */,
 				4E4BB766299CA031003EB516 /* TrainerMenuView.swift */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		4EABBA3829CF577A00ADB960 /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Functions;
 			sourceTree = "<group>";
 		};
 		4EBA94DB29C42345002A45F3 /* Models */ = {
@@ -275,7 +241,6 @@
 				4EBA94DC29C42355002A45F3 /* PoseEstimator.swift */,
 				4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */,
 				4EABBA6629E5A28E00ADB960 /* CorrectionEstimator.swift */,
-				4EABBA2C29C74AAA00ADB960 /* RepModel.swift */,
 				4EABBA4A29D6B02900ADB960 /* SquatModel_Controller.swift */,
 				4EABBA5629DD940B00ADB960 /* DeadliftModel_Controller.swift */,
 				4EABBA6429E5287E00ADB960 /* SquatCorrector.swift */,
@@ -299,12 +264,8 @@
 			children = (
 				4ED986C6292B50F20031E482 /* LaunchScreen_Prototype.storyboard */,
 				4EABBA2229C5A82500ADB960 /* Main.storyboard */,
-				4EBA94E229C42D7A002A45F3 /* ViewController.swift */,
-				4EABBA3629C9BD6600ADB960 /* ViewController_Dup.swift */,
 				4EABBA4429D0176D00ADB960 /* ViewController_Dup2.swift */,
 				4EBA94FB29C49FA4002A45F3 /* ViewControllerWrapper.swift */,
-				4EABBA2329C5A86B00ADB960 /* OverlayView.swift */,
-				4EABBA2829C6C8D400ADB960 /* OverlayView_dup.swift */,
 				4EABBA6C29E969D100ADB960 /* OverlayView_dup2.swift */,
 				4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */,
 				4EABBA5F29E138EE00ADB960 /* ArrowPath.swift */,
@@ -483,7 +444,6 @@
 			files = (
 				4EABBA6529E5287E00ADB960 /* SquatCorrector.swift in Sources */,
 				4ED986CB292BD6CB0031E482 /* SettingsView.swift in Sources */,
-				4ED986CF292BD7050031E482 /* HomeView.swift in Sources */,
 				4EBA94EC29C43226002A45F3 /* PoseData.swift in Sources */,
 				4ED986C9292BD2CE0031E482 /* MainView.swift in Sources */,
 				4EABBA4729D017E400ADB960 /* ViewController_Dup2.swift in Sources */,
@@ -665,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Prototype/Preview Content\"";
@@ -683,8 +644,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PostureFit.Prototype;
+				PRODUCT_BUNDLE_IDENTIFIER = PostureFit.PrototypeTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -697,6 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Prototype/Preview Content\"";
@@ -715,8 +678,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PostureFit.Prototype;
+				PRODUCT_BUNDLE_IDENTIFIER = PostureFit.PrototypeTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -769,7 +733,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 925L55ZWSK;
+				DEVELOPMENT_TEAM = ZW59HAJT97;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PostureFit.PrototypeUITests;
@@ -787,7 +751,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 925L55ZWSK;
+				DEVELOPMENT_TEAM = ZW59HAJT97;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PostureFit.PrototypeUITests;
@@ -809,7 +773,7 @@
 				1BCD6B5028F7C8000055BC80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1BCD6B5128F7C8000055BC80 /* Build configuration list for PBXNativeTarget "PostureFit" */ = {
 			isa = XCConfigurationList;
@@ -818,7 +782,7 @@
 				1BCD6B5328F7C8000055BC80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1BCD6B5428F7C8000055BC80 /* Build configuration list for PBXNativeTarget "PostureFitTests" */ = {
 			isa = XCConfigurationList;
@@ -827,7 +791,7 @@
 				1BCD6B5628F7C8000055BC80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1BCD6B5728F7C8000055BC80 /* Build configuration list for PBXNativeTarget "PostureFitUITests" */ = {
 			isa = XCConfigurationList;
@@ -836,7 +800,7 @@
 				1BCD6B5928F7C8000055BC80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

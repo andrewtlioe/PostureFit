@@ -106,21 +106,10 @@ static let lines = [
   
   
   private func drawArrows(at context: CGContext, dots: [CGPoint], correctionParts: [needCorrectionPart]) { // get body part which needs correction and direction; maintain arrow configs for each direction of correction
-    //let dot = dots[0] // points to nose
-    //print(dots)
-    
-    //let upRight = (from: CGPointMake(dot.x - 30, dot.y + 30), to: CGPointMake(dot.x + 30, dot.y - 30))
     
     
     for (dot, correctionPart) in zip(dots, correctionParts) {
       print("In loop")
-      
-      
-      /*let arrow = UIBezierPath.arrow(from: CGPointMake(dot.x + -100.0 , dot.y + 0.0), to: CGPointMake(dot.x + 100.0, dot.y + 0.0),
-                                       tailWidth: 5, headWidth: 10, headLength: 10)*/
-      
-      //let arrow = UIBezierPath.arrow(from: CGPointMake(50, 100), to: CGPointMake(100, 50),
-          //tailWidth: 10, headWidth: 25, headLength: 40)
       
       
       let arrow = UIBezierPath.arrow(from: CGPointMake(dot.x + correctionPart.direction.from.x_adj, dot.y + correctionPart.direction.from.y_adj), to: CGPointMake(dot.x + correctionPart.direction.to.x_adj, dot.y + correctionPart.direction.to.y_adj),
@@ -128,13 +117,6 @@ static let lines = [
       
       
       //need coordinates in real-time from here
-      
-      /*
-      let arrow = UIBezierPath.arrow(from: CGPointMake(correctionPart.coordinate.x + correctionPart.direction.from.x_adj, correctionPart.coordinate.y + correctionPart.direction.from.y_adj), to: CGPointMake(correctionPart.coordinate.x + correctionPart.direction.to.x_adj, correctionPart.coordinate.y + correctionPart.direction.to.y_adj),
-                                       tailWidth: 5, headWidth: 10, headLength: 10) //in ArrowPath.swift; bottom-left to top-right */
-      
-      //let arrow = UIBezierPath.arrow(from: upRight.from, to: upRight.to,
-                                       //tailWidth: 5, headWidth: 10, headLength: 10) //in ArrowPath.swift; bottom-left to top-right
       
       context.addPath(arrow.cgPath)
       
