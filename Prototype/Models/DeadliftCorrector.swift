@@ -103,28 +103,37 @@ final class DeadliftCorrector: CorrectionEstimator {
     
     
       
-      let slopeLeg = (leftKnee.y - leftAnkle.y) / (leftKnee.x - leftAnkle.x)
-      let slopeThigh = (leftHip.y - leftKnee.y) / (leftHip.x-leftKnee.x)
-      let slopeThorax = (leftShoulder.y - leftHip.y) / (leftShoulder.x-leftHip.x)
+    let slopeLeg = (leftKnee.y - leftAnkle.y) / (leftKnee.x - leftAnkle.x)
+    let slopeThigh = (leftHip.y - leftKnee.y) / (leftHip.x-leftKnee.x)
+    let slopeThorax = (leftShoulder.y - leftHip.y) / (leftShoulder.x-leftHip.x)
       
-      let angleKnee = atan( (slopeLeg - slopeThigh) ) // / (1 + slopeLeg*slopeThigh ) )
+    var angleKnee = atan( (slopeLeg - slopeThigh) ) // / (1 + slopeLeg*slopeThigh ) )
+    
+    if angleKnee < 0 {
+      angleKnee = Double.pi + angleKnee // plus because already neg
+    }
+    
       
-      print ("angleKnee: ", angleKnee)
+    print ("angleKnee: ", angleKnee)
       
-      if angleKnee > ((100 )*Double.pi)/180 && angleKnee < ((170 )*Double.pi)/180 { // need to get threshold for kneepit angle; coincide with leftHip.y+150 >= leftKnee.y -> if that condition is true, then this condition is false
-        
-        print("In knee")
-        partCorrection.bodyPart = .leftHip
-        partCorrection.direction = Direction.down
-        
-        needCorrectionParts.append(partCorrection)
-      }
+    if angleKnee > ((100 )*Double.pi)/180 && angleKnee < ((150 )*Double.pi)/180 { // need to get threshold for kneepit angle
+      
+      print("In knee")
+      partCorrection.bodyPart = .leftHip
+      partCorrection.direction = Direction.down
+      
+      needCorrectionParts.append(partCorrection)
+    }
     
       
     /// At bottom angles
     if leftHip.y+150 >= leftKnee.y { // need to get threshold for bottom position; should get from model but no time
       
-      let angleHip = atan ( (slopeLeg - slopeThorax ) / (1 + slopeLeg*slopeThorax ) )
+      var angleHip = atan ( (slopeLeg - slopeThorax ) ) // / (1 + slopeLeg*slopeThorax ) )
+      
+      if angleHip < 0 {
+        angleHip = Double.pi + angleHip // plus because already neg
+      }
       
       print ("angleHip: ", angleHip)
       
