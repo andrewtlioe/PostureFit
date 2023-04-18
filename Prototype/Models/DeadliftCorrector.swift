@@ -31,6 +31,7 @@ final class DeadliftCorrector: CorrectionEstimator {
     var leftAnkle = KeyPoint.init(bodyPart: .leftAnkle).coordinate
     var leftShoulder = KeyPoint.init(bodyPart: .leftShoulder).coordinate
     var nose = KeyPoint.init(bodyPart: .nose).coordinate
+    var leftEar = KeyPoint.init(bodyPart: .leftEar).coordinate
     
     var needCorrectionParts = [needCorrectionPart]()
     
@@ -66,7 +67,7 @@ final class DeadliftCorrector: CorrectionEstimator {
       case .rightEye:
         continue
       case .leftEar:
-        continue
+        leftEar = result.keyPoints[index].coordinate
       case .rightEar:
         continue
       case .leftShoulder:
@@ -116,18 +117,18 @@ final class DeadliftCorrector: CorrectionEstimator {
       
     print ("angleKnee: ", angleKnee)
       
-    if angleKnee > ((100 )*Double.pi)/180 && angleKnee < ((150 )*Double.pi)/180 { // need to get threshold for kneepit angle
+    if angleKnee > ((100-10 )*Double.pi)/180 && angleKnee < ((100+65 )*Double.pi)/180 { // if too bow down; need to get threshold for kneepit angle
       
       print("In knee")
       partCorrection.bodyPart = .leftHip
       partCorrection.direction = Direction.down
       
       needCorrectionParts.append(partCorrection)
-    }
+    //}
     
       
     /// At bottom angles
-    if leftHip.y+150 >= leftKnee.y { // need to get threshold for bottom position; should get from model but no time
+    //if leftHip.y+150 >= leftKnee.y { // need to get threshold for bottom position; should get from model but no time
       
       var angleHip = atan ( (slopeLeg - slopeThorax ) ) // / (1 + slopeLeg*slopeThorax ) )
       
@@ -137,11 +138,21 @@ final class DeadliftCorrector: CorrectionEstimator {
       
       print ("angleHip: ", angleHip)
       
-      if angleHip < ((60 )*Double.pi)/180 { // need to get threshold for hippit angle
+      if angleHip < ((60+20 )*Double.pi)/180 { // need to get threshold for hippit angle
         
         print("In hip")
         partCorrection.bodyPart = .leftShoulder
         partCorrection.direction = Direction.up
+        
+        needCorrectionParts.append(partCorrection)
+        
+      }
+      
+      if leftEar.x+10 >= leftHip.x  { // overextension
+        
+        print("In nose")
+        partCorrection.bodyPart = .nose
+        partCorrection.direction = Direction.left
         
         needCorrectionParts.append(partCorrection)
         

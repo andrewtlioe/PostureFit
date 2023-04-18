@@ -92,9 +92,9 @@ final class SquatCorrector: CorrectionEstimator {
     var partCorrection: needCorrectionPart = needCorrectionPart()
     
     /// At bottom angles
-    if leftHip.y+150 >= leftKnee.y { // need to get threshold for bottom position; should get from model but no time
+    if leftHip.y+200 >= leftKnee.y { // head too much forward; need to get threshold for bottom position, should get from model but no time
       
-      if nose.x+150 <= leftKnee.x {
+      if nose.x+100 <= leftKnee.x {
         partCorrection.bodyPart = .nose
         partCorrection.direction = Direction.right
         
@@ -102,7 +102,7 @@ final class SquatCorrector: CorrectionEstimator {
         
       }
       
-      if leftHip.y+30 >= leftKnee.y{
+      if leftHip.y+25 >= leftKnee.y { //leg parallelity
         partCorrection.bodyPart = .leftHip
         partCorrection.direction = Direction.up
         
