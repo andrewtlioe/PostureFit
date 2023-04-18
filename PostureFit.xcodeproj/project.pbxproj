@@ -13,7 +13,6 @@
 		1BCD6B4228F7C8000055BC80 /* PrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6B4128F7C8000055BC80 /* PrototypeTests.swift */; };
 		1BCD6B4C28F7C8000055BC80 /* PrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6B4B28F7C8000055BC80 /* PrototypeUITests.swift */; };
 		1BCD6B4E28F7C8000055BC80 /* PrototypeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6B4D28F7C8000055BC80 /* PrototypeUITestsLaunchTests.swift */; };
-		4E4BB7602997C6E9003EB516 /* PoseEstimation_Support in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BB75F2997C6E9003EB516 /* PoseEstimation_Support */; };
 		4E4BB767299CA031003EB516 /* TrainerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4BB766299CA031003EB516 /* TrainerMenuView.swift */; };
 		4EABBA3429C8B7F700ADB960 /* RepetitionEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */; };
 		4EABBA4129D00F5D00ADB960 /* CameraSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABBA4029D00F5D00ADB960 /* CameraSwitcher.swift */; };
@@ -73,7 +72,6 @@
 		1BCD6B4728F7C8000055BC80 /* PostureFitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostureFitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCD6B4B28F7C8000055BC80 /* PrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeUITests.swift; sourceTree = "<group>"; };
 		1BCD6B4D28F7C8000055BC80 /* PrototypeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4E4BB75F2997C6E9003EB516 /* PoseEstimation_Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PoseEstimation_Support; sourceTree = "<group>"; };
 		4E4BB766299CA031003EB516 /* TrainerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerMenuView.swift; sourceTree = "<group>"; };
 		4EABBA2229C5A82500ADB960 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EABBA2E29C761B800ADB960 /* RepetitionEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionEstimator.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		1BCD6B2428F7C7FC0055BC80 = {
 			isa = PBXGroup;
 			children = (
-				4E4BB75F2997C6E9003EB516 /* PoseEstimation_Support */,
 				1BCD6B2F28F7C7FC0055BC80 /* Prototype */,
 				1BCD6B4028F7C8000055BC80 /* PrototypeTests */,
 				1BCD6B4A28F7C8000055BC80 /* PrototypeUITests */,
@@ -389,7 +386,6 @@
 			files = (
 				4EABBA5A29DF0C8500ADB960 /* Main.storyboard in Resources */,
 				1BCD6B3828F7C8000055BC80 /* Preview Assets.xcassets in Resources */,
-				4E4BB7602997C6E9003EB516 /* PoseEstimation_Support in Resources */,
 				4EBA94FD29C4A314002A45F3 /* movenet_thunder.tflite in Resources */,
 				4EBA94FE29C4A316002A45F3 /* movenet_lightning.tflite in Resources */,
 				1BCD6B3528F7C8000055BC80 /* Assets.xcassets in Resources */,

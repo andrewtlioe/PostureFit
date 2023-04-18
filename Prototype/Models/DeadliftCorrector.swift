@@ -124,40 +124,38 @@ final class DeadliftCorrector: CorrectionEstimator {
       partCorrection.direction = Direction.down
       
       needCorrectionParts.append(partCorrection)
-    //}
+    }
     
       
     /// At bottom angles
     //if leftHip.y+150 >= leftKnee.y { // need to get threshold for bottom position; should get from model but no time
       
-      var angleHip = atan ( (slopeLeg - slopeThorax ) ) // / (1 + slopeLeg*slopeThorax ) )
+    var angleHip = atan ( (slopeLeg - slopeThorax ) ) // / (1 + slopeLeg*slopeThorax ) )
       
-      if angleHip < 0 {
-        angleHip = Double.pi + angleHip // plus because already neg
-      }
+    if angleHip < 0 {
+      angleHip = Double.pi + angleHip // plus because already neg
+    }
       
-      print ("angleHip: ", angleHip)
+    print ("angleHip: ", angleHip)
       
-      if angleHip < ((60+20 )*Double.pi)/180 { // need to get threshold for hippit angle
-        
-        print("In hip")
-        partCorrection.bodyPart = .leftShoulder
-        partCorrection.direction = Direction.up
-        
-        needCorrectionParts.append(partCorrection)
-        
-      }
+    if angleHip < ((60-40 )*Double.pi)/180 { // need to get threshold for hippit angle
       
-      if leftEar.x+10 >= leftHip.x  { // overextension
+      print("In hip")
+      partCorrection.bodyPart = .leftShoulder
+      partCorrection.direction = Direction.up
         
-        print("In nose")
-        partCorrection.bodyPart = .nose
-        partCorrection.direction = Direction.left
+      needCorrectionParts.append(partCorrection)
         
-        needCorrectionParts.append(partCorrection)
-        
-      }
+    }
       
+      
+    if leftEar.x-20 >= leftHip.x  { // overextension
+      
+      print("In nose")
+      partCorrection.bodyPart = .nose
+      partCorrection.direction = Direction.left
+      
+      needCorrectionParts.append(partCorrection)
       
     }
     
